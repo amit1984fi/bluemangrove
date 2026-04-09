@@ -109,6 +109,7 @@ nav .container {
   align-items: center;
   justify-content: space-between;
   height: 72px;
+  position: relative;
 }
 
 .nav-logo {
@@ -994,11 +995,9 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
-  .nav-hamburger { display: flex; }
-  
+  .nav-links { display: none !important; }
   .nav-links.active {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     position: absolute;
     top: 72px;
@@ -1008,7 +1007,10 @@ footer a {
     padding: 24px;
     gap: 16px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 101;
   }
+  .nav-hamburger { display: flex !important; margin-left: auto; }
+  
 
   .crisis-stat { flex-direction: column; gap: 32px; }
   .crisis-stat-number { width: 180px; height: 180px; }
